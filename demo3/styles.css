@@ -1,0 +1,75 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f6f6f6;
+  margin: 40px;
+}
+
+.container-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 36px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.08);
+  padding: 36px 32px 40px 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.text-element {
+  font-size: 2rem;
+  color: #222;
+  align-self: center;
+  justify-self: start;
+  grid-column: span 1;
+}
+
+.button, button, a.button {
+  background: #4e82f7;
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 20px 0;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  min-width: 220px;
+  min-height: 60px;
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.button:hover, button:hover, a.button:hover {
+  background: #2a56b8;
+}
+
+a:not(.button) {
+  color: #3a6cf7;
+  background: none;
+  font-weight: 500;
+  text-decoration: underline;
+  padding: 0;
+  font-size: 1.6rem;
+  align-self: center;
+  width: auto;
+}
+
+@media (max-width: 900px) {
+  .container-div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .container-div {
+    grid-template-columns: 1fr;
+  }
+  .button, button, a.button {
+    min-width: 120px;
+    font-size: 1.1rem;
+    padding: 12px 0;
+  }
+}
